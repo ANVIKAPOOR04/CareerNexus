@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Directory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        .hr-managers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .hr-managers .card {
+            width: calc(33.33% - 20px);
+            text-align: center;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+      
+            padding: 10px;
+        }
+
+        .hr-managers img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hr-managers .card {
+                width: calc(50% - 20px);
+                /* Adjusted to fit 2 cards in one row for smaller screens */
+            }
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .company-logos img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Companies</h1>
+        <div class="company-logos">
+            <img src="./assets/google.jpg" alt="Google" onclick="filterByCompany('Google')">
+            <img src="./assets/amazon.jpg" alt="Amazon" onclick="filterByCompany('Amazon')">
+            <img src="./assets/microsoftnew.jpg" alt="Microsoft" onclick="filterByCompany('Microsoft')">
+            <!-- Add more company logos here -->
+            <img src="./assets/apple.jpg" alt="Apple" onclick="filterByCompany('Apple')">
+            <img src="./assets/facebook.jpg" alt="Facebook" onclick="filterByCompany('Facebook')">
+            <img src="./assets/Screenshot (212).png" alt="IBM" onclick="filterByCompany('IBM')">
+            <img src="./assets/Screenshot (213).png" alt="Intel" onclick="filterByCompany('Intel')">
+            <img src="./assets/cisco.jpg" alt="Cisco" onclick="filterByCompany('Cisco')">
+            <img src="./assets/Screenshot (214).png" alt="Oracle" onclick="filterByCompany('Oracle')">
+            <img src="./assets/adobe.jpg" alt="Adobe" onclick="filterByCompany('Adobe')">
+        </div>
+    </header>
+    <main>
+        <div class="hr-managers">
+            <!-- HR Managers -->
+            <!-- Google -->
+            <div class="card google">
+                <img src="assets/ig2.jpeg" alt="">
+                <p>Priya Das</p>
+                <p>HR Manager</p>
+                <p>10 years experience</p>
+            </div>
+
+            <div class="card google">
+                <img src="assets/ig3.jpeg" alt="">
+                <p>Mia Johnson</p>
+                <p>Senior HR Specialist</p>
+                <p>8 years experience</p>
+            </div>
+
+            <!-- Amazon -->
+            <div class="card amazon">
+                <img src="assets/ig4.jpeg" alt="">
+                <p>Emily Wang</p>
+                <p>HR Director</p>
+                <p>18 years experience</p>
+            </div>
+            <div class="card amazon">
+                <img src="assets/ig5.jpeg" alt="">
+                <p>Saransh Vijay</p>
+                <p>Senior HR Specialist</p>
+
+
+                <p>9 years experience</p>
+            </div>
+
+            <!-- Microsoft -->
+            <div class="card microsoft">
+                <img src="assets/ig6.jpeg" alt="">
+                <p>Amaya Singh</p>
+                <p>HR Director</p>
+                <p>17 years experience</p>
+            </div>
+            <div class="card microsoft">
+                <img src="assets/ig7.jpeg" alt="">
+                <p>Mary Thomson</p>
+                <p>Senior HR Specialist</p>
+                <p>7 years experience</p>
+            </div>
+
+            <!-- Apple -->
+            <div class="card apple">
+                <img src="assets/ig8.jpeg" alt="">
+                <p>Jessica Brown</p>
+                <p>HR Manager</p>
+                <p>9 years experience</p>
+            </div>
+            <div class="card apple">
+                <img src="assets/ig9.jpeg" alt="">
+                <p>Olive Smith</p>
+                <p>Senior HR Specialist</p>
+                <p>6 years experience</p>
+            </div>
+
+            <!-- Facebook -->
+            <div class="card facebook">
+                <img src="assets/ig10.jpeg" alt="">
+                <p>Jennifer Martinez</p>
+                <p>HR Manager</p>
+                <p>10 years experience</p>
+            </div>
+            <div class="card facebook">
+                <img src="assets/ig11.jpeg" alt="">
+                <p>Laura Thompson</p>
+                <p>Senior HR Specialist</p>
+                <p>5 years experience</p>
+            </div>
+
+            <!-- IBM -->
+            <div class="card ibm">
+                <img src="assets/ig12.jpeg" alt="">
+                <p>Samantha Davis</p>
+                <p>HR Manager</p>
+                <p>8 years experience</p>
+            </div>
+            <div class="card ibm">
+                <img src="assets/ig13.jpeg" alt="">
+                <p>Ganesh Goyal</p>
+                <p>Senior HR Specialist</p>
+                <p>4 years experience</p>
+            </div>
+
+            <!-- Intel -->
+            <div class="card intel">
+                <img src="assets/ig14 - Copy.jpeg" alt="">
+                <p>Matthew Thomas</p>
+                <p>HR Manager</p>
+                <p>7 years experience</p>
+            </div>
+            <div class="card intel">
+                <img src="assets/ig15 - Copy.jpeg" alt="">
+                <p>Jassica Keil</p>
+                <p>Senior HR Specialist</p>
+                <p>3 years experience</p>
+            </div>
+
+            <!-- Cisco -->
+            <div class="card cisco">
+                <img src="assets/ig16.jpeg" alt="">
+                <p>Michelle Taylor</p>
+                <p>HR Manager</p>
+                <p>6 years experience</p>
+            </div>
+            <div class="card cisco">
+                <img src="assets/ig17.jpeg" alt="">
+                <p>Steva Martinez</p>
+                <p>HR Director</p>
+                <p>11 years experience</p>
+            </div>
+
+
+            <!-- Oracle -->
+            <div class="card oracle">
+                <img src="assets/ig18.jpg" alt="">
+                <p>Christina Rodriguez</p>
+                <p>HR Manager</p>
+                <p>5 years experience</p>
+            </div>
+            <div class="card oracle">
+                <img src="assets/ig20.jpg" alt="">
+                <p>Maria Hernandez</p>
+                <p>HR Director</p>
+                <p>10 years experience</p>
+            </div>
+
+            <!-- Adobe -->
+            <div class="card adobe">
+                <img src="assets/ig21.jpg" alt="">
+                <p>Amanda Taylor</p>
+                <p>HR Manager</p>
+                <p>4 years experience</p>
+            </div>
+            <div class="card adobe">
+                <img src="assets/ig22.jpeg" alt="">
+                <p>Nia Robinson</p>
+                <HR Director>
+                <p>9 years experience</p>
+            </div>
+            <div class="card adobe">
+                <img src="assets/ig23.jpeg" alt="">
+                <p>Laura Martinez</p>
+                <p>Senior HR Specialist</p>
+                <p>11 months experience</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 HR Directory</p>
+    </footer>
+
+    <script>
+        function filterByCompany(company) {
+            var hrManagers, card, i;
+
+            hrManagers = document.getElementsByClassName('hr-managers')[0];
+            card = hrManagers.getElementsByClassName('card');
+
+            for (i = 0; i < card.length; i++) {
+                if (card[i].classList.contains(company.toLowerCase())) {
+                    card[i].style.display = '';
+                } else {
+                    card[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
