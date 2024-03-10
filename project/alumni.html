@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        main {
+            flex: 1; /* Grow and take available space */
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+
+        .alumni {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            max-width: 1200px; /* Limit the width of the alumni directory */
+            width: 100%; /* Ensure the content doesn't overflow */
+        }
+
+        .alumni .card {
+            width: calc(33.33% - 20px); /* Adjusted to fit 3 cards in one row */
+            text-align: center;
+            margin-bottom: 20px;
+            box-sizing: border-box; /* Includes padding and border in the width calculation */
+            padding: 20px; /* Add padding to the cards */
+            border: 1px solid #ccc; /* Add border to the cards */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            transition: box-shadow 0.3s ease; /* Add transition for hover effect */
+        }
+
+        .alumni .card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover for depth effect */
+        }
+
+        .alumni img {
+            width: 100%;
+            max-width: 300px; /* Added max-width to limit image size on larger screens */
+            height: 300px; /* Ensures aspect ratio is maintained */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .alumni .card {
+                width: calc(50% - 20px); /* Adjusted to fit 2 cards in one row for smaller screens */
+            }
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%; /* Take full width of the container */
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img11.jpg" style="width: 80px;height: 80px;" alt="Alumni Directory Logo">
+        </div>
+        <h1>Alumni Directory</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchAlumni()" placeholder="Search for alumni">
+        </div>
+    </header>
+    <main>
+        <div class="alumni">
+            <div class="card">
+                <img src="./img1.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Harshita Singh</p>
+                    <p>Occupation: Software Developer</p>
+                    <p>Experience: 5 years</p>
+                    <p>Company: Google</p>
+                    <p>College: VIT Vellore</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img2.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Lavanaya Jain</p>
+                    <p>Occupation: Data Analyst</p>
+                    <p>Experience: 3 years</p>
+                    <p>Company: Data Insights Inc.</p>
+                    <p>College: BITS Pilani</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img3.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Anirudh Agarwal</p>
+                    <p>Occupation: Financial Analyst</p>
+                    <p>Experience: 8 years</p>
+                    <p>Company: Financial Solutions Ltd.</p>
+                    <p>College: DIU University</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img4.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Harsha Gupta</p>
+                    <p>Occupation: Graphic Designer</p>
+                    <p>Experience: 6 years</p>
+                    <p>Company: Creative Designs Co.</p>
+                    <p>College: PES Institute</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img5.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Ishika Jha</p>
+                    <p>Occupation: Project Manager</p>
+                    <p>Experience: 4 years</p>
+                    <p>Company: Project Solutions Inc.</p>
+                    <p>College: Nirma University</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img6.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Sanaya Jain</p>
+                    <p>Occupation: Human Resources Manager</p>
+                    <p>Experience: 7 years</p>
+                    <p>Company: HR Solutions Ltd.</p>
+                    <p>College: SRM Chennai</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img7.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Rahul Gupta</p>
+                    <p>Occupation: Full Stack Web Developer</p>
+                    <p>Experience: 10 years</p>
+                    <p>Company: Web Solutions Co.</p>
+                    <p>College: LMNIT Jaipur</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img9.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Sanvi Kapoor</p>
+                    <p>Occupation: Human Resources Manager</p>
+                    <p>Experience: 8 years</p>
+                    <p>Company: Microsoft</p>
+                    <p>College: IIM Ahmedabad</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img10.jpg" alt="">
+                <div class="alumni-details">
+                    <p>Name: Hemansh Kalya</p>
+                    <p>Occupation: Human Resources Manager</p>
+                    <p>Experience: 5 years</p>
+                    <p>Company: Career Nexus</p>
+                    <p>College: IIM Surat</p>
+                </div>
+            </div>
+            <!-- Add more alumni cards here -->
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Alumni Directory</p>
+    </footer>
+
+    <script>
+        function searchAlumni() {
+            var input, filter, alumni, card, name, company, college, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            alumni = document.getElementsByClassName('alumni')[0];
+            card = alumni.getElementsByClassName('card');
+
+            for (i = 0; i < card.length; i++) {
+                name = card[i].getElementsByTagName('p')[0];
+                company = card[i].getElementsByTagName('p')[3];
+                college = card[i].getElementsByTagName('p')[4];
+                txtValue = name.textContent || name.innerText;
+                companyValue = company.textContent || company.innerText;
+                collegeValue = college.textContent || college.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 ||
+                    companyValue.toUpperCase().indexOf(filter) > -1 ||
+                    collegeValue.toUpperCase().indexOf(filter) > -1) {
+                    card[i].style.display = '';
+                } else {
+                    card[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
